@@ -10,7 +10,7 @@ define(function(require) {
 
     // Need to verify receipts? This library is included by default.
     // https://github.com/mozilla/receiptverifier
-    require('receiptverifier');
+    //require('receiptverifier');
 
     // Want to install the app locally? This library hooks up the
     // installation button. See <button class="install-btn"> in
@@ -19,12 +19,17 @@ define(function(require) {
 
     // Write your app here.
 
-
-
-
-
-
-
-
 });
 
+function get_geoloc(){
+	if ("geolocation" in navigator) {
+  		/* geoloc disponible */
+		navigator.geolocation.getCurrentPosition(stocker_position);
+	} else {
+  		alert("I'm sorry, but geolocation services are not supported by your browser.");
+	}
+}
+
+function stocker_position(position){
+	alert("position : " + position.coords.latitude + " : " + position.coords.longitude);
+}
