@@ -35,8 +35,9 @@
 		<h1>Locate It</h1>
 	</header>
 
-	<section>
-		<button>Mark Location</button>
+	<section role="region">
+	  <button onClick="get_geoloc()">Mark Location</button>
+	  <button onClick="display_last_position()">Get Last Location</button>
 	</section>
 
 	<section id="compass">
@@ -58,13 +59,12 @@
 			transform="translate(125,125) rotate(90)"
 			style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
 		</svg>
-
 	</section>
     
-    <!-- Using require.js, a module system for javascript, include the
-         js files. This loads "main.js", which in turn can load other
-         files, all handled by require.js:
-         http://requirejs.org/docs/api.html#jsfiles -->
+	<!-- Using require.js, a module system for javascript, include the
+	js files. This loads "main.js", which in turn can load other
+	files, all handled by require.js:
+	http://requirejs.org/docs/api.html#jsfiles -->
 	<script type="text/javascript"
 		data-main="js/init.js"
 		src="js/lib/require.js"></script>
