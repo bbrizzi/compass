@@ -32,19 +32,19 @@
 <body role="application">
 	<section role="region">
 	<header>
-		<h1>Locate It</h1>
+		<h1>Boussole</h1>
 	</header>
-
+<!--
 	<section role="region">
 	  <button onClick="get_geoloc()">Mark Location</button>
 	  <button onClick="display_last_position()">Get Last Location</button>
 	</section>
-
+-->
 	<section id="compass">
-
+<!--
 		<input type="button" value="màj" onclick="javascript:setAngle();">
 		<input type="text" id="e_angle" name="e_angle" value="30">
-
+-->
 		<br />
 
 		<svg 
@@ -60,6 +60,8 @@
 			style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
 		</svg>
 	</section>
+	
+	<div id="orientation"></div>
     
 	<!-- Using require.js, a module system for javascript, include the
 	js files. This loads "main.js", which in turn can load other
