@@ -30,6 +30,15 @@ function get_geoloc(){
 	}
 }
 
-function stocker_position(position){
+function set_position(position){
 	alert("position : " + position.coords.latitude + " : " + position.coords.longitude);
+	localStorage.setItem("position",JSON.stringify(position));
+}
+/*
+	Get the stored GPS position in the JSON position.
+	
+*/
+function get_position()
+{
+	return localStorage.getItem("position");
 }
