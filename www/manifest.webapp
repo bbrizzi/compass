@@ -4,9 +4,10 @@
   "description": "Your new awesome Open Web App",
   "launch_path": "/index.html",
   "icons": {
-    "16": "/img/icons/mortar-16.png",
-    "48": "/img/icons/mortar-48.png",
-    "128": "/img/icons/mortar-128.png"
+    "32": "/img/icons/icon_32.png",
+    "48": "/img/icons/icon_48.png",
+	"64": "/img/icons/icon_64.png",
+    "128": "/img/icons/icon_128.png"
   },
   "developer": {
     "name": "Your Name",
