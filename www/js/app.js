@@ -24,7 +24,7 @@ define(function(require) {
 function get_geoloc(){
 	if ("geolocation" in navigator) {
   		/* geoloc disponible */
-		navigator.geolocation.getCurrentPosition(stocker_position);
+		navigator.geolocation.getCurrentPosition(set_position);
 	} else {
   		alert("I'm sorry, but geolocation services are not supported by your browser.");
 	}
@@ -32,7 +32,8 @@ function get_geoloc(){
 
 function set_position(position){
 	alert("position : " + position.coords.latitude + " : " + position.coords.longitude);
-	localStorage.setItem("position",JSON.stringify(position));
+	localStorage.setItem("latitude",JSON.stringify(position.coords.latitude));
+	localStorage.setItem("longitude",JSON.stringify(position.coords.longitude));
 }
 /*
 	Get the stored GPS position in the JSON position.
@@ -40,5 +41,9 @@ function set_position(position){
 */
 function get_position()
 {
-	return localStorage.getItem("position");
+	return [JSON.parse(localStorage.getItem("latitude")), JSON.parse(localStorage.getItem("longitude"))];
+}
+
+function display_last_position(){
+	alert("Last Position : " + get_position());
 }
