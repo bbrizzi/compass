@@ -13,7 +13,7 @@ if ( window.DeviceOrientationEvent ) {
     window.addEventListener("deviceorientation", function( event ) {
     //alpha: rotation around z-axis
     var rotateDegrees = 360 - event.alpha;
-	document.querySelector("#orientation").innerHtml = rotateDegrees;
+	document.querySelector("#orientation").innerHTML = rotateDegrees;
 	rotate( rotateDegrees );
     
     }, false);

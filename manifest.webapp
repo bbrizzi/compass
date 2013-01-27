@@ -1,8 +1,9 @@
 {
   "version": "0.1",
-  "name": "My App",
-  "description": "Your new awesome Open Web App",
+  "name": "Compass",
+  "description": "Compass Application",
   "launch_path": "/index.html",
+  "permissions": 
   "icons": {
     "32": "/img/icons/icon_32.png",
     "48": "/img/icons/icon_48.png",
@@ -10,23 +11,14 @@
     "128": "/img/icons/icon_128.png"
   },
   "developer": {
-    "name": "Your Name",
-    "url": "http://yourawesomeapp.com"
+    "name": "Fabelier",
+    "url": "http://www.fabelier.org"
   },
   "installs_allowed_from": ["*"],
   "appcache_path": "/cache.manifest",
   "locales": {
-    "es": {
-      "description": "Su nueva aplicación impresionante Open Web",
-      "developer": {
-        "url": "http://yourawesomeapp.com"
-      }
-    },
-    "it": {
-      "description": "Il vostro nuovo fantastico Open Web App",
-      "developer": {
-        "url": "http://yourawesomeapp.com"
-      }
+    "fr": {
+      "description": "Application Boussole"
     }
   },
   "default_locale": "en"
