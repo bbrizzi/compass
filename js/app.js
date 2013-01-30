@@ -1,3 +1,7 @@
+// Mes variables
+var saved_latitude = null;
+var saved_longitude = null;
+
 // This uses require.js to structure javascript:
 // http://requirejs.org/docs/api.html#define
 
@@ -55,16 +59,44 @@ function set_position(position){
 */
 function get_position()
 {
-	return [JSON.parse(localStorage.getItem("latitude")),
-		JSON.parse(localStorage.getItem("longitude"))];
+	saved_latitude = JSON.parse(localStorage.getItem("latitude"));
+	saved_longitude = JSON.parse(localStorage.getItem("longitude"));
 }
+
 /*
 	display_last_position()
-
 	Display on the screen the last position on a pop-up.
 	@call : get_position()
 */
-function display_last_position()
-{
-	alert("Last Position : " + get_position());
+function display_last_position(){
+	get_position();
+	alert("Last Position : " + saved_latitude + ":" + saved_longitude);
+	navigator.geolocation.watchPosition(update_compass, {enableHighAccuracy:true, maximumAge:30000, timeout:27000});
+}
+
+if (typeof(Number.prototype.toRad) === "undefined") {
+  Number.prototype.toRad = function() {
+    return this * Math.PI / 180;
+  }
+}
+
+// Mettre à jour la fleche
+function update_compass(position){
+	var lat1 = saved_latitude;
+	var lon1 = saved_longitude;
+	var lat2 = position.coords.latitude;
+	var lon2 = position.coords.longitude;
+	
+	var R = 6371; // km
+	var dLat = (lat2-lat1).toRad();
+	var dLon = (lon2-lon1).toRad();
+	var lat1 = lat1.toRad();
+	var lat2 = lat2.toRad();
+
+	var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+	        Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2); 
+	var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+	var d = R * c;
+	
+	alert("Distance : " + d);
 }
