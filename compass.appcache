@@ -1,5 +1,33 @@
 CACHE MANIFEST
 #v0.1-2013-02-07
+index.html
+favicon.ico
+css/buttons/images/ui/danger-disables.png
+css/buttons/images/ui/danger-press.png
+css/buttons/images/ui/danger.png
+css/buttons/images/ui/default.png
+css/buttons/images/ui/disabled.png
+css/buttons/images/ui/recommend.png
+css/headers/images/ui/header.png
+css/headers/images/ui/negative.png
+css/headers/images/ui/search.png
+css/headers/images/ui/separator-large.png
+css/headers/images/ui/separator.png
+css/headers/images/ui/shadow.png
+css/headers/images/ui/subheader.png
+css/app.css
+css/buttons.css
+css/headers.css
+css/specific.css
+
+img/glyphicons-halflings-white.png
+img/glyphicons-halflings.png
+img/icons/icon_128.png
+img/icons/icon_64.png
+img/icons/icon_48.png
+img/icons/icon_32.png
+
+js/rotation.js
 
 NETWORK:
 *

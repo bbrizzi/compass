@@ -1,4 +1,7 @@
-locate-it
+Compass
 =========
 
-FirefoxOS application to locate my car.
+Compass web application for FirefoxOS.
+
+Uses the JavaScript deviceorientation API.
+
