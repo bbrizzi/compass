@@ -14,3 +14,7 @@ section[role="region"] {
 #compass {
 	text-align:center;
 }
+
+#orientation{
+	display: none;
+}

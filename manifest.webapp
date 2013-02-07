@@ -3,11 +3,10 @@
   "name": "Compass",
   "description": "Compass Application",
   "launch_path": "/index.html",
-  "permissions": 
   "icons": {
     "32": "/img/icons/icon_32.png",
     "48": "/img/icons/icon_48.png",
-	"64": "/img/icons/icon_64.png",
+    "64": "/img/icons/icon_64.png",
     "128": "/img/icons/icon_128.png"
   },
   "developer": {
@@ -21,5 +20,6 @@
       "description": "Application Boussole"
     }
   },
-  "default_locale": "en"
+  "default_locale": "en",
+  "orientation": ["portrait"]
 }
