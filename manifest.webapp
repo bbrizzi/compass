@@ -14,7 +14,7 @@
     "url": "http://www.fabelier.org"
   },
   "installs_allowed_from": ["*"],
-  "appcache_path": "/cache.manifest",
+  "appcache_path": "/compass/compass.appcache",
   "locales": {
     "fr": {
       "description": "Application Boussole"
