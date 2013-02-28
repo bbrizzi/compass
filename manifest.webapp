@@ -2,12 +2,12 @@
   "version": "0.1",
   "name": "Compass",
   "description": "Compass Application",
-  "launch_path": "/index.html",
+  "launch_path": "/compass/index.html",
   "icons": {
-    "32": "/img/icons/icon_32.png",
-    "48": "/img/icons/icon_48.png",
-    "64": "/img/icons/icon_64.png",
-    "128": "/img/icons/icon_128.png"
+    "32": "/compass/img/icons/icon_32.png",
+    "48": "/compass/img/icons/icon_48.png",
+    "64": "/compass/img/icons/icon_64.png",
+    "128": "/compass/img/icons/icon_128.png"
   },
   "developer": {
     "name": "Fabelier",
